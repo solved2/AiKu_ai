@@ -1,0 +1,278 @@
+['run_entity.py', '--do_train', '--do_eval', '--eval_test', '--learning_rate=1e-5', '--task_learning_rate=5e-4', '--train_batch_size=32', '--context_window', '0', '--task', 'ko', '--data_dir', 'korean_data/json/', '--model', 'monologg/kobert', '--output_dir', 'KLUE_dir']
+Namespace(bert_model_dir=None, bertadam=False, context_window=0, data_dir='korean_data/json/', dev_data='korean_data/json/dev.json', dev_pred_filename='ent_pred_dev.json', do_eval=True, do_train=True, eval_batch_size=32, eval_per_epoch=1, eval_test=True, learning_rate=1e-05, max_span_length=8, model='monologg/kobert', num_epoch=20, output_dir='KLUE_dir', print_loss_step=100, seed=0, task='ko', task_learning_rate=0.0005, test_data='korean_data/json/test.json', test_pred_filename='ent_pred_test.json', train_batch_size=32, train_data='korean_data/json/train.json', train_shuffle=False, use_albert=False, warmup_proportion=0.1)
+Moving to CUDA...
+# GPUs = 1
+# Overlap: 0
+Extracted 5000 samples from 5000 documents, with 14178 NER labels, 31.704 avg input length, 93 max length
+Max Length: 93, max NER: 16
+# Overlap: 0
+Extracted 21008 samples from 21008 documents, with 51010 NER labels, 29.685 avg input length, 111 max length
+Max Length: 111, max NER: 23
+Epoch=0, iter=99, loss=392.33390
+Epoch=0, iter=199, loss=79.78193
+Epoch=0, iter=299, loss=17.73395
+Epoch=0, iter=399, loss=17.54244
+Epoch=0, iter=499, loss=17.09699
+Epoch=0, iter=599, loss=16.13925
+Evaluating...
+Accuracy: 0.987595
+Cor: 0, Pred TOT: 0, Gold TOT: 14178
+P: 0.00000, R: 0.00000, F1: 0.00000
+Used time: 43.091763
+Epoch=1, iter=42, loss=13.30191
+Epoch=1, iter=142, loss=11.20883
+Epoch=1, iter=242, loss=9.12985
+Epoch=1, iter=342, loss=7.43377
+Epoch=1, iter=442, loss=5.75472
+Epoch=1, iter=542, loss=4.77819
+Epoch=1, iter=642, loss=4.24037
+Evaluating...
+Accuracy: 0.994356
+Cor: 10063, Pred TOT: 12927, Gold TOT: 14178
+P: 0.77845, R: 0.70976, F1: 0.74252
+Used time: 43.681946
+!!! Best valid (epoch=1): 74.25
+Saving model to KLUE_dir...
+Epoch=2, iter=85, loss=3.62626
+Epoch=2, iter=185, loss=3.54651
+Epoch=2, iter=285, loss=3.21393
+Epoch=2, iter=385, loss=2.97308
+Epoch=2, iter=485, loss=2.75717
+Epoch=2, iter=585, loss=2.67326
+Evaluating...
+Accuracy: 0.995802
+Cor: 11587, Pred TOT: 14191, Gold TOT: 14178
+P: 0.81650, R: 0.81725, F1: 0.81688
+Used time: 43.075158
+!!! Best valid (epoch=2): 81.69
+Saving model to KLUE_dir...
+Epoch=3, iter=28, loss=2.51740
+Epoch=3, iter=128, loss=2.35545
+Epoch=3, iter=228, loss=2.31796
+Epoch=3, iter=328, loss=2.27785
+Epoch=3, iter=428, loss=2.19017
+Epoch=3, iter=528, loss=2.08368
+Epoch=3, iter=628, loss=2.03407
+Evaluating...
+Accuracy: 0.996328
+Cor: 11823, Pred TOT: 14059, Gold TOT: 14178
+P: 0.84096, R: 0.83390, F1: 0.83741
+Used time: 40.943197
+!!! Best valid (epoch=3): 83.74
+Saving model to KLUE_dir...
+Epoch=4, iter=71, loss=1.85644
+Epoch=4, iter=171, loss=1.87187
+Epoch=4, iter=271, loss=1.83313
+Epoch=4, iter=371, loss=1.77423
+Epoch=4, iter=471, loss=1.70964
+Epoch=4, iter=571, loss=1.67957
+Evaluating...
+Accuracy: 0.996589
+Cor: 11907, Pred TOT: 13921, Gold TOT: 14178
+P: 0.85533, R: 0.83982, F1: 0.84750
+Used time: 61.236425
+!!! Best valid (epoch=4): 84.75
+Saving model to KLUE_dir...
+Epoch=5, iter=14, loss=1.59843
+Epoch=5, iter=114, loss=1.56496
+Epoch=5, iter=214, loss=1.54449
+Epoch=5, iter=314, loss=1.46448
+Epoch=5, iter=414, loss=1.49619
+Epoch=5, iter=514, loss=1.39744
+Epoch=5, iter=614, loss=1.41656
+Evaluating...
+Accuracy: 0.996654
+Cor: 12161, Pred TOT: 14339, Gold TOT: 14178
+P: 0.84811, R: 0.85774, F1: 0.85289
+Used time: 61.234938
+!!! Best valid (epoch=5): 85.29
+Saving model to KLUE_dir...
+Epoch=6, iter=57, loss=1.33418
+Epoch=6, iter=157, loss=1.32146
+Epoch=6, iter=257, loss=1.26517
+Epoch=6, iter=357, loss=1.28179
+Epoch=6, iter=457, loss=1.23033
+Epoch=6, iter=557, loss=1.20121
+Evaluating...
+Accuracy: 0.996801
+Cor: 12156, Pred TOT: 14180, Gold TOT: 14178
+P: 0.85726, R: 0.85738, F1: 0.85732
+Used time: 62.036667
+!!! Best valid (epoch=6): 85.73
+Saving model to KLUE_dir...
+Epoch=7, iter=0, loss=1.20742
+Epoch=7, iter=100, loss=1.10264
+Epoch=7, iter=200, loss=1.19803
+Epoch=7, iter=300, loss=1.03025
+Epoch=7, iter=400, loss=1.13014
+Epoch=7, iter=500, loss=1.07511
+Epoch=7, iter=600, loss=1.05922
+Evaluating...
+Accuracy: 0.996858
+Cor: 12228, Pred TOT: 14257, Gold TOT: 14178
+P: 0.85768, R: 0.86246, F1: 0.86007
+Used time: 62.102767
+!!! Best valid (epoch=7): 86.01
+Saving model to KLUE_dir...
+Epoch=8, iter=43, loss=1.00544
+Epoch=8, iter=143, loss=1.04181
+Epoch=8, iter=243, loss=0.96576
+Epoch=8, iter=343, loss=0.95034
+Epoch=8, iter=443, loss=0.95718
+Epoch=8, iter=543, loss=0.91436
+Epoch=8, iter=643, loss=0.93094
+Evaluating...
+Accuracy: 0.996891
+Cor: 12157, Pred TOT: 14079, Gold TOT: 14178
+P: 0.86348, R: 0.85746, F1: 0.86046
+Used time: 56.465521
+!!! Best valid (epoch=8): 86.05
+Saving model to KLUE_dir...
+Epoch=9, iter=86, loss=0.88811
+Epoch=9, iter=186, loss=0.91346
+Epoch=9, iter=286, loss=0.81107
+Epoch=9, iter=386, loss=0.86829
+Epoch=9, iter=486, loss=0.81920
+Epoch=9, iter=586, loss=0.84524
+Evaluating...
+Accuracy: 0.996915
+Cor: 12036, Pred TOT: 13807, Gold TOT: 14178
+P: 0.87173, R: 0.84892, F1: 0.86018
+Used time: 39.068841
+Epoch=10, iter=29, loss=0.82478
+Epoch=10, iter=129, loss=0.75746
+Epoch=10, iter=229, loss=0.75156
+Epoch=10, iter=329, loss=0.74734
+Epoch=10, iter=429, loss=0.77035
+Epoch=10, iter=529, loss=0.74151
+Epoch=10, iter=629, loss=0.70689
+Evaluating...
+Accuracy: 0.996870
+Cor: 12173, Pred TOT: 14124, Gold TOT: 14178
+P: 0.86187, R: 0.85858, F1: 0.86022
+Used time: 61.924704
+Epoch=11, iter=72, loss=0.70281
+Epoch=11, iter=172, loss=0.69240
+Epoch=11, iter=272, loss=0.68720
+Epoch=11, iter=372, loss=0.66461
+Epoch=11, iter=472, loss=0.68072
+Epoch=11, iter=572, loss=0.66103
+Evaluating...
+Accuracy: 0.996934
+Cor: 12162, Pred TOT: 14029, Gold TOT: 14178
+P: 0.86692, R: 0.85781, F1: 0.86234
+Used time: 62.205325
+!!! Best valid (epoch=11): 86.23
+Saving model to KLUE_dir...
+Epoch=12, iter=15, loss=0.65259
+Epoch=12, iter=115, loss=0.61048
+Epoch=12, iter=215, loss=0.62332
+Epoch=12, iter=315, loss=0.58333
+Epoch=12, iter=415, loss=0.61437
+Epoch=12, iter=515, loss=0.59289
+Epoch=12, iter=615, loss=0.60404
+Evaluating...
+Accuracy: 0.996999
+Cor: 12035, Pred TOT: 13702, Gold TOT: 14178
+P: 0.87834, R: 0.84885, F1: 0.86334
+Used time: 62.067683
+!!! Best valid (epoch=12): 86.33
+Saving model to KLUE_dir...
+Epoch=13, iter=58, loss=0.59974
+Epoch=13, iter=158, loss=0.57569
+Epoch=13, iter=258, loss=0.53953
+Epoch=13, iter=358, loss=0.56641
+Epoch=13, iter=458, loss=0.56406
+Epoch=13, iter=558, loss=0.53862
+Evaluating...
+Accuracy: 0.996937
+Cor: 11976, Pred TOT: 13656, Gold TOT: 14178
+P: 0.87698, R: 0.84469, F1: 0.86053
+Used time: 62.218833
+Epoch=14, iter=1, loss=0.55471
+Epoch=14, iter=101, loss=0.52789
+Epoch=14, iter=201, loss=0.55224
+Epoch=14, iter=301, loss=0.45955
+Epoch=14, iter=401, loss=0.50382
+Epoch=14, iter=501, loss=0.49705
+Epoch=14, iter=601, loss=0.47064
+Evaluating...
+Accuracy: 0.996986
+Cor: 12126, Pred TOT: 13901, Gold TOT: 14178
+P: 0.87231, R: 0.85527, F1: 0.86371
+Used time: 62.838119
+!!! Best valid (epoch=14): 86.37
+Saving model to KLUE_dir...
+Epoch=15, iter=44, loss=0.48973
+Epoch=15, iter=144, loss=0.46266
+Epoch=15, iter=244, loss=0.45718
+Epoch=15, iter=344, loss=0.46846
+Epoch=15, iter=444, loss=0.47683
+Epoch=15, iter=544, loss=0.43250
+Epoch=15, iter=644, loss=0.45943
+Evaluating...
+Accuracy: 0.996968
+Cor: 12126, Pred TOT: 13919, Gold TOT: 14178
+P: 0.87118, R: 0.85527, F1: 0.86315
+Used time: 62.417896
+Epoch=16, iter=87, loss=0.43015
+Epoch=16, iter=187, loss=0.45534
+Epoch=16, iter=287, loss=0.39613
+Epoch=16, iter=387, loss=0.45719
+Epoch=16, iter=487, loss=0.44423
+Epoch=16, iter=587, loss=0.39394
+Evaluating...
+Accuracy: 0.997009
+Cor: 12142, Pred TOT: 13900, Gold TOT: 14178
+P: 0.87353, R: 0.85640, F1: 0.86488
+Used time: 55.289194
+!!! Best valid (epoch=16): 86.49
+Saving model to KLUE_dir...
+Epoch=17, iter=30, loss=0.45109
+Epoch=17, iter=130, loss=0.41413
+Epoch=17, iter=230, loss=0.41179
+Epoch=17, iter=330, loss=0.38084
+Epoch=17, iter=430, loss=0.41714
+Epoch=17, iter=530, loss=0.39584
+Epoch=17, iter=630, loss=0.40194
+Evaluating...
+Accuracy: 0.996989
+Cor: 12073, Pred TOT: 13791, Gold TOT: 14178
+P: 0.87543, R: 0.85153, F1: 0.86331
+Used time: 61.856508
+Epoch=18, iter=73, loss=0.40942
+Epoch=18, iter=173, loss=0.38525
+Epoch=18, iter=273, loss=0.39105
+Epoch=18, iter=373, loss=0.38699
+Epoch=18, iter=473, loss=0.39520
+Epoch=18, iter=573, loss=0.38155
+Evaluating...
+Accuracy: 0.996998
+Cor: 12190, Pred TOT: 14023, Gold TOT: 14178
+P: 0.86929, R: 0.85978, F1: 0.86451
+Used time: 61.921445
+Epoch=19, iter=16, loss=0.39290
+Epoch=19, iter=116, loss=0.37078
+Epoch=19, iter=216, loss=0.37641
+Epoch=19, iter=316, loss=0.36840
+Epoch=19, iter=416, loss=0.40259
+Epoch=19, iter=516, loss=0.36847
+Epoch=19, iter=616, loss=0.34941
+Evaluating...
+Accuracy: 0.996975
+Cor: 12156, Pred TOT: 13985, Gold TOT: 14178
+P: 0.86922, R: 0.85738, F1: 0.86326
+Used time: 61.148869
+Loading BERT model from KLUE_dir/
+Moving to CUDA...
+# GPUs = 1
+# Overlap: 0
+Extracted 1 samples from 1 documents, with 0 NER labels, 20.000 avg input length, 20 max length
+Max Length: 20, max NER: 0
+Evaluating...
+Accuracy: 0.977273
+Cor: 0, Pred TOT: 3, Gold TOT: 0
+P: 0.00000, R: 0.00000, F1: 0.00000
+Used time: 0.069568
+Total pred entities: 3
+Output predictions to KLUE_dir\ent_pred_test.json..

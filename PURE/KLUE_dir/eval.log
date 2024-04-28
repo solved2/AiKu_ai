@@ -1,0 +1,20 @@
+['run_entity.py', '--do_eval', '--eval_test', '--learning_rate=1e-5', '--task_learning_rate=5e-4', '--train_batch_size=32', '--context_window', '0', '--task', 'ko', '--data_dir', 'korean_data/json/', '--model', 'monologg/kobert', '--output_dir', 'KLUE_dir']
+Namespace(bert_model_dir=None, bertadam=False, context_window=0, data_dir='korean_data/json/', dev_data='korean_data/json/dev.json', dev_pred_filename='ent_pred_dev.json', do_eval=True, do_train=False, eval_batch_size=32, eval_per_epoch=1, eval_test=True, learning_rate=1e-05, max_span_length=8, model='monologg/kobert', num_epoch=20, output_dir='KLUE_dir', print_loss_step=100, seed=0, task='ko', task_learning_rate=0.0005, test_data='korean_data/json/test.json', test_pred_filename='ent_pred_test.json', train_batch_size=32, train_data='korean_data/json/train.json', train_shuffle=False, use_albert=False, warmup_proportion=0.1)
+Moving to CUDA...
+# GPUs = 1
+# Overlap: 0
+Extracted 5000 samples from 5000 documents, with 14178 NER labels, 31.704 avg input length, 93 max length
+Max Length: 93, max NER: 16
+Loading BERT model from KLUE_dir/
+Moving to CUDA...
+# GPUs = 1
+# Overlap: 0
+Extracted 1 samples from 1 documents, with 0 NER labels, 23.000 avg input length, 23 max length
+Max Length: 23, max NER: 0
+Evaluating...
+Accuracy: 0.980769
+Cor: 0, Pred TOT: 3, Gold TOT: 0
+P: 0.00000, R: 0.00000, F1: 0.00000
+Used time: 1.639645
+Total pred entities: 3
+Output predictions to KLUE_dir\ent_pred_test.json..
